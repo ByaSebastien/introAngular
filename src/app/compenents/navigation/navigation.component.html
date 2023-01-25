@@ -1,0 +1,43 @@
+<!-- <ul>
+    <li>
+        <a routerLink="/home">Home</a>
+    </li>
+    <li>
+        <a routerLink="/about">About</a>
+    </li>
+    <li>
+        <h4>Démo</h4>
+        <ul>
+            <li>
+                <a routerLink="/demo/demo1">Binding</a>
+            </li>
+            <li>
+                <a routerLink="/demo/demo2">Pipe</a>
+            </li>
+            <li>
+                <a routerLink="/demo/demo3">Directive</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <h4>Exercice</h4>
+        <ul>
+            <li>
+                <a routerLink="/exercice/exo1">Timer</a>
+            </li>
+        </ul>
+    </li>
+</ul> -->
+
+<!-- Apres directives -->
+
+<ul>
+    <li *ngFor="let link of links ;let i = index">
+        <a [routerLink]="link.url" (click)="toggleLink(i)">{{link.title}}</a>
+        <ul *ngIf="link.isVisible">
+            <li *ngFor="let child of link.children">
+                <a [routerLink]="child.url">{{child.title}}</a>
+            </li>
+        </ul>
+    </li>
+</ul>

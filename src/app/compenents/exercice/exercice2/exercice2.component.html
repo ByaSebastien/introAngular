@@ -1,0 +1,8 @@
+<div class="chapter">
+    <h3>Shopping List</h3>
+    <input type="text" [(ngModel)]="item" (keyup.enter)="ajouter()">
+    <button (click)="ajouter()">Ajouter</button>
+
+    <app-panier [listProduct]="shoppingList" (sendDelete)="delete($event)" (sendQttUp)="up($event)"
+        (sendQttDown)="down($event)"></app-panier>
+</div>

@@ -1,0 +1,10 @@
+<h4>Panier</h4>
+<ul>
+    <li *ngFor="let item of listProduct;let i = index">
+        <p class="name">{{item.name}}</p>
+        <p class="qtt">{{item.qtt}}</p>
+        <button (click)="onDown(i)">➖</button>
+        <button (click)="onUp(i)">➕</button>
+        <button (click)="onDelete(i)">🗑️</button>
+    </li>
+</ul>

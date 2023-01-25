@@ -1,0 +1,24 @@
+<div class="chapter">
+    <h3>Pipes</h3>
+    <div>
+        <h4>Pipe sur les strings</h4>
+        <p>Normal : {{myString}}</p>
+        <p>UPPERCASE : {{myString | uppercase}}</p>
+        <p>lowercase : {{myString | lowercase}}</p>
+        <p>Titlecase : {{myString | titlecase}}</p>
+    </div>
+    <div>
+        <h4>Pipe sur les nombres</h4>
+        <p>Normal : {{myNumber}}</p>
+        <p>Arrondis : {{myNumber | number : '1.0-1'}}</p>
+    </div>
+    <div>
+        <h4>Pipe sur les dates</h4>
+        <p>Normal : {{myDate}}</p>
+        <p>Format : {{myDate | date : 'dd/MM/yyyy'}}</p>
+    </div>
+</div>
+<div class="chapter">
+    <h3>Custom pipe</h3>
+    <p>{{temperature}} °C = {{temperature | toFarenheit}} °F</p>
+</div>

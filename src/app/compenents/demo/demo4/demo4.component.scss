@@ -1,0 +1,10 @@
+.parent {
+    width: 90%;
+    padding: 5px;
+    border: 1px solid darkred;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+}

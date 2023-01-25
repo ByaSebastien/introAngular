@@ -1,0 +1,21 @@
+li {
+    display: flex;
+    align-items: center;
+}
+
+li * {
+    margin: 1%;
+}
+
+.name {
+    width: 10%;
+}
+
+.qtt {
+    width: 3%;
+}
+
+button {
+    height: 25px;
+    width: 50px;
+}

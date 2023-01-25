@@ -1,0 +1,9 @@
+<ul>
+    <li *ngFor="let book of books;let i = index">
+        <p>{{book.title}}</p>
+        <p>{{book.author}}</p>
+        <p>{{book.created | date: "dd/MM/yyyy"}}</p>
+        <button (click)="onModify(i)">📝</button>
+        <button (click)="onDelete(i)">🗑</button>
+    </li>
+</ul>

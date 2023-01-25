@@ -1,0 +1,27 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="monFormulaire">
+    <div>
+        <input type="text" placeholder="Titre" formControlName="title">
+        <span class="txt-error"
+            *ngIf="monFormulaire.get('title')?.touched && monFormulaire.get('title')?.errors?.['required']">Champs
+            requis</span>
+        <span class="txt-error"
+            *ngIf="monFormulaire.get('title')?.errors?.['minlength'] || monFormulaire.get('title')?.errors?.['maxlength'] ">Le
+            nom doit faire au moins 2 et maximum 50 caractères</span>
+    </div>
+    <div>
+        <input type="text" placeholder="Auteur" formControlName="author">
+        <span class="txt-error"
+            *ngIf="monFormulaire.get('author')?.touched && monFormulaire.get('author')?.errors?.['required']">Champs
+            requis</span>
+        <span class="txt-error"
+            *ngIf="monFormulaire.get('author')?.errors?.['minlength'] || monFormulaire.get('author')?.errors?.['maxlength'] ">Le
+            nom doit faire au moins 2 et maximum 50 caractères</span>
+    </div>
+    <div>
+        <input type="date" placeholder="created" formControlName="created">
+        <span class="txt-error"
+            *ngIf="monFormulaire.get('created')?.touched && monFormulaire.get('created')?.errors?.['required']">Champs
+            requis</span>
+    </div>
+    <button (click)="onSubmit()">Ajouter</button>
+</form>

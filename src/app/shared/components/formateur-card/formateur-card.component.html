@@ -1,0 +1,7 @@
+<div *ngIf="formateur" class="card">
+    <h6>Formateur n° {{formateur.id}}</h6>
+    <img [src]="formateur.avatar" [alt]="formateur.prenom">
+    <p>{{formateur.prenom}} {{formateur.nom}}</p>
+    <p>{{formateur.dateNaiss | date: "dd/MM/yyyy"}}</p>
+    <button (click)="envoiNom()">C'est moi!</button>
+</div>

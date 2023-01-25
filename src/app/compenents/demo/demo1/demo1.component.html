@@ -1,0 +1,29 @@
+<div class="chapter">
+    <h3>Property Binding</h3>
+    <div>
+        <h4>Binding one way</h4>
+        <p>Hello {{maVariable}} !!!</p>
+    </div>
+    <div>
+        <h4>Binding two way</h4>
+        <input type="text" [(ngModel)]="prenom">
+        <p>Comment vas-tu {{prenom}} ?</p>
+    </div>
+</div>
+<div class="chapter">
+    <h3>Event Binding</h3>
+    <p>Nous sommes {{jour}}</p>
+    <button (click)="changerJour('Lundi')">Lundi</button>
+    <button (click)="changerJour('Mardi')">Mardi</button>
+    <button (click)="changerJour('Mercredi')">Mercredi</button>
+    <button (click)="changerJour('Jeudi')">Jeudi</button>
+    <button (click)="changerJour('Vendredi')">Vendredi</button>
+    <button (click)="changerJour('Samedi')">Samedi</button>
+    <button (click)="changerJour('Dimanche')">Dimanche</button>
+</div>
+<div class="chapter">
+    <h3>Attribute binding</h3>
+    <div [id]="id">Ma super div</div>
+    <button [disabled]="isActive">Click</button>
+    <button (click)="toggleActive()">Activer/Désactiver</button>
+</div>

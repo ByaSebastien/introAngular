@@ -1,0 +1,22 @@
+header {
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+nav {
+    height: 85%;
+    width: 15%;
+    position: fixed;
+    top: 100px;
+    border-right: 1px solid black;
+}
+
+main {
+    position: absolute;
+    top: 100px;
+    left: 15%;
+    padding: 10px 30px;
+}

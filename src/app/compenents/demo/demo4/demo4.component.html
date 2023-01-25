@@ -1,0 +1,19 @@
+<div class="chapter">
+    <h3>Input / Output</h3>
+    <div class="parent">
+        <h4>Bonjours je suis {{prenomParent}}</h4>
+        <p>J'ai <input type="text" [(ngModel)]="age"></p>
+        <p>Mon enfant a envie de {{envieEnfant}}</p>
+
+        <app-enfant (sendEnvie)="changeEnvie($event)" [prenomDeMonParent]="prenomParent" [AgeParent]="age">
+            <p>Hello!</p>
+        </app-enfant>
+    </div>
+</div>
+<div class="chapter">
+    <h3>Le formateur du jour est {{formateurDuJour}}</h3>
+    <div class="cards">
+        <app-formateur-card *ngFor="let formateur of formateurs" [formateur]="formateur"
+            (sendName)="setName($event)"></app-formateur-card>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div *ngIf="isBasicMode">
+    <app-read [books]="books" (sendDelete)="Delete($event)" (sendModify)="GoModify($event)"></app-read>
+    <button (click)="GoAdd()">Ajouter un nouveau livre</button>
+</div>
+<div *ngIf="isAddMode">
+    <app-book-form (sendBook)="Add($event)"></app-book-form>
+</div>
+<div *ngIf="isModifyMode">
+    <app-book-form [currentBook]="books[idBookToChange]" (sendBook)="Modify($event)"></app-book-form>
+</div>

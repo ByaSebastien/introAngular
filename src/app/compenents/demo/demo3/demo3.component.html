@@ -1,0 +1,55 @@
+<h3>Les directives</h3>
+<div class="chapter">
+    <h4>Component directives</h4>
+    <div>
+        <h5>ngModel</h5>
+        <p>Bonjour {{prenom}}</p>
+        <input type="text" [(ngModel)]="prenom">
+    </div>
+    <div>
+        <h5>ngStyle</h5>
+        <p [ngStyle]="{color: myColor}">Hello World!!!</p>
+    </div>
+    <div>
+        <h5>ngClass</h5>
+        <p [ngClass]="{gros: isGros,gras: isGras,italique: isItalique}">Angular c'est sylé!!!</p>
+        <button (click)="toggleIsGras()">Gras/Pas Gras</button>
+        <button (click)="toggleIsGros()">Gros/Pas Gros</button>
+        <button (click)="toggleIsItalique()">Italique/Pas Italique</button>
+    </div>
+</div>
+<div class="chapter">
+    <h4>Structural directives</h4>
+    <div>
+        <h5>ngIf</h5>
+        <p *ngIf="isJour">🌞 Jour 🌞</p>
+        <p *ngIf="!isJour">🌜 Nuit 🌛</p>
+        <button (click)="toggleIsJour()">Jour/Nuit</button>
+    </div>
+    <div>
+        <h5>ngFor</h5>
+        <div class="cards">
+            <div *ngFor="let formateur of formateurs;let i = index" class="card">
+                <h6>Formateur n° {{i + 1}}</h6>
+                <img [src]="formateur.avatar" [alt]="formateur.prenom">
+                <p>{{formateur.prenom}} {{formateur.nom}}</p>
+                <p>Date de naissance : {{formateur.dateNaiss | date : 'dd/MM/yyyy'}}</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h5>ngSwitch</h5>
+        <label for="choixBoisson">1 : Café <br> 2 : Thé <br> 3 : Soda <br></label>
+        <input type="text" [(ngModel)]="choix" id="choixBoisson">
+        <div [ngSwitch]="choix">
+            <div *ngSwitchCase="1">Voici du café 🍵</div>
+            <div *ngSwitchCase="2">Voici du thé 🫖</div>
+            <div *ngSwitchCase="3">Voici du soda 🥤</div>
+            <div *ngSwitchDefault>Entrée invalide</div>
+        </div>
+    </div>
+</div>
+<div class="chapter">
+    <h4>Custom directives</h4>
+    <p highlight>Passez moi la souris dessus!</p>
+</div>
